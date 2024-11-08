@@ -14,3 +14,6 @@ This tool analyzes the given RNA structure in dot-bracket format and returns an 
 
 ## Raw Data
 The raw data used in this project is downloaded from the bpRNA-1m Version 1.0, which is a database of single-molecule RNA secondary structures annotated by bpRNA. You can access the database [here](https://bprna.cgrb.oregonstate.edu/).
+
+## Tools
+We have added **VARNA: Visualization Applet for RNA secondary structure** to facilitate the visualization of RNA secondary structures. This tool allows you to view and analyze the RNA structures created during the project. You can download VARNA [here](https://varna.lisn.upsaclay.fr/index.php?lang=en&page=downloads&css=varna).

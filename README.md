@@ -17,3 +17,8 @@ The raw data used in this project is downloaded from the bpRNA-1m Version 1.0, w
 
 ## Tools
 We have added **VARNA: Visualization Applet for RNA secondary structure** to facilitate the visualization of RNA secondary structures. This tool allows you to view and analyze the RNA structures created during the project. You can download VARNA [here](https://varna.lisn.upsaclay.fr/index.php?lang=en&page=downloads&css=varna).
+
+## Database
+
+The database for this project currently includes data on **External Elements**. External Elements are nucleotide bases located at the beginning and end of RNA sequences that do not form bonds with any other bases. We have extracted and organized these External Element data to support further analysis and design processes.
+In future updates, we may expand the database to include additional RNA structural features and annotations.

@@ -1,13 +1,16 @@
 start_sequences = []
 end_sequences = []
 
-for i in range(1, 11):
+for i in range(1, 102319):
+    print(i)
     filename = f"D:/Github/BIC-RNA/dbnFiles/dbnFiles/ ({i}).dbn"
 
     with open(filename, 'r') as file:
         lines = file.readlines()
 
-        sequence = lines[3].strip() 
+        sequence = lines[3].strip()
+        sequence = sequence.upper()
+
         structure = lines[4].strip() 
 
         start_dots = 0

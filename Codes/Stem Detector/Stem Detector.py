@@ -43,7 +43,8 @@ def parse_rna_parentheses(structure, sequence):
         else:
             i += 1
 
-structure = "(((.....))).....((())).....((((((((((((((((((((((((....))...))...))...)))))).(((...(((...))).((((((....))))))....)))..))))))))))))....((())).........(((((..((((((((((..)))))...))...((()))...(((.....)))..)))...)))))...((...(((...((((...(..))))))))))......"
-sequence = "SDGSDGSDFGHDSTGLDFNDSOGHPTORW[HOITPORETIHTOKRGEHJGKEJIJJGIWEOFKBJFJFJFJJDJFOKUTUFUUUFERIJSFDGFGKDNJGKDFNJDOKGFDJIKREGJHFIGK]K[OOJPIWOJGPIDWERJOJJJLCNXKLCNBKLSKODJFLIOSGFIDHIJOFIDJOGFIDOGJGGDFDSJFGDKSFGHDHDNHGHSLSFD[PLAO'S;KBV,ZCNBKNBDKBBKTKFJFDJBJCBCVBGG"
+
+structure = "(((.....))).....((()))....(((..(((..((....((((..)))))))))))).............((((((((((((((((((...(((((((.....((((((((((((....))...))...))...)))))).(((..))))).(((...))).((((((....))))))....)))..)))))))))))))))..)))))....((())).........((((((((((..((((((((((((..)))))...))))...((()))...(((.....)))..)))))))))))))...((...(((...((((...(..)))))))))).."
+sequence = "1234567890-[POIUYTREWASDFGHJKL,MNBVCXSDERTHJHGFRTJHGFRTUJHGFDWESWQWERTYUIO0P;LOP-[P-098765RTFGHJKLPTTQ[]9PERMNGFBVCSWEWQ21234R5TJHGTUJHGHJGHGFDHTUP;LKJAWESFDIKGFILIJHGJLJKJHGJKJK1234REDFSDPOITHJKTRDFHPTHTRHKHBFGHFDDNFGHFDF9OPTRHDSTRYUOP[POIUHGFSVDFGHGJ095UIRHFGC16FRIUTRTIYHFDFHBFGHFHERHTORTGJS45TUOQ0987654321WERTDASJRKTUFGJMGHJFNFGJJTDHGJPT2"
 
 parse_rna_parentheses(structure, sequence)

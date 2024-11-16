@@ -47,7 +47,7 @@ def parse_rna_pseudoknot(structure, sequence, output_file):
 output_filename = "Pseudoknot_Sequences.txt"
 
 with open(output_filename, "w") as output_file:
-    for i in range(1, 102319):
+    for i in range(102308, 102319): #for i in range(1, 102319):
         print(f"Processing file {i}...")
         filename = f"D:/Github/BIC-RNA/dbnFiles/dbnFiles/ ({i}).dbn"
 
@@ -57,7 +57,7 @@ with open(output_filename, "w") as output_file:
 
                 sequence = lines[3].strip().upper()
                 structure = lines[4].strip().replace('(', '.').replace(')', '.')
-
+                print(len(structure))
                 parse_rna_pseudoknot(structure, sequence, output_file)
 
         except FileNotFoundError:

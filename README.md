@@ -20,4 +20,9 @@ We have added **VARNA: Visualization Applet for RNA secondary structure** to fac
 
 ## Database
 
-The database for this project currently includes data on External Elements and Stems. External Elements refer to nucleotide bases located at the beginning and end of RNA sequences that do not form bonds with other bases, while Stems are self-complementary, base-paired regions. We have extracted and organized these data to facilitate further analysis and support design processes. Future updates may expand the database to incorporate additional RNA structural features and annotations.
+The database for this project currently includes data on External Elements, Stems, and Pseudoknots.
+
+External Elements are nucleotide bases located at the beginning and end of RNA sequences that do not form bonds with other bases.
+Stems are self-complementary, base-paired regions.
+Pseudoknots are structures formed when a single-stranded region of RNA in the loop of a hairpin base-pairs with a complementary stretch of nucleotides elsewhere in the RNA chain.
+These data have been systematically extracted and organized to facilitate in-depth analysis and support the design process. Future updates to the database may include additional RNA structural features and annotations to enhance its utility.

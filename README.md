@@ -20,5 +20,4 @@ We have added **VARNA: Visualization Applet for RNA secondary structure** to fac
 
 ## Database
 
-The database for this project currently includes data on **External Elements**. External Elements are nucleotide bases located at the beginning and end of RNA sequences that do not form bonds with any other bases. We have extracted and organized these External Element data to support further analysis and design processes.
-In future updates, we may expand the database to include additional RNA structural features and annotations.
+The database for this project currently includes data on External Elements and Stems. External Elements refer to nucleotide bases located at the beginning and end of RNA sequences that do not form bonds with other bases, while Stems are self-complementary, base-paired regions. We have extracted and organized these data to facilitate further analysis and support design processes. Future updates may expand the database to incorporate additional RNA structural features and annotations.

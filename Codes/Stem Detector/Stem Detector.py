@@ -1,4 +1,4 @@
-def parse_rna_parentheses(structure, sequence):
+def parse_rna_parentheses(structure, sequence, output_file):
     open_stack = []
 
     i = 0
@@ -25,18 +25,18 @@ def parse_rna_parentheses(structure, sequence):
 
                 if open_count == close_count:
                     stem_sequence = open_seq + paired_seq[:close_count]
-                    print(stem_sequence)
+                    output_file.write(f"{stem_sequence}\n")
                     close_count = 0
 
                 elif open_count > close_count:
                     stem_sequence = open_seq[-close_count:] + paired_seq[:close_count]
-                    print(stem_sequence)
+                    output_file.write(f"{stem_sequence}\n")
                     open_stack.append((f"S{open_count - close_count}", open_seq[:-close_count]))
                     close_count = 0
 
                 elif open_count < close_count:
                     stem_sequence = open_seq + paired_seq[:open_count]
-                    print(stem_sequence)
+                    output_file.write(f"{stem_sequence}\n")
                     paired_seq = paired_seq[open_count:]
                     close_count -= open_count
 
@@ -44,7 +44,23 @@ def parse_rna_parentheses(structure, sequence):
             i += 1
 
 
-structure = "(((.....))).....((()))....(((..(((..((....((((..)))))))))))).............((((((((((((((((((...(((((((.....((((((((((((....))...))...))...)))))).(((..))))).(((...))).((((((....))))))....)))..)))))))))))))))..)))))....((())).........((((((((((..((((((((((((..)))))...))))...((()))...(((.....)))..)))))))))))))...((...(((...((((...(..)))))))))).."
-sequence = "1234567890-[POIUYTREWASDFGHJKL,MNBVCXSDERTHJHGFRTJHGFRTUJHGFDWESWQWERTYUIO0P;LOP-[P-098765RTFGHJKLPTTQ[]9PERMNGFBVCSWEWQ21234R5TJHGTUJHGHJGHGFDHTUP;LKJAWESFDIKGFILIJHGJLJKJHGJKJK1234REDFSDPOITHJKTRDFHPTHTRHKHBFGHFDDNFGHFDF9OPTRHDSTRYUOP[POIUHGFSVDFGHGJ095UIRHFGC16FRIUTRTIYHFDFHBFGHFHERHTORTGJS45TUOQ0987654321WERTDASJRKTUFGJMGHJFNFGJJTDHGJPT2"
+output_filename = "Stem_Sequences.txt"
 
-parse_rna_parentheses(structure, sequence)
+with open(output_filename, "w") as output_file:
+    for i in range(1, 102319):
+        print(f"Processing file {i}...")
+        filename = f"D:/Github/BIC-RNA/dbnFiles/dbnFiles/ ({i}).dbn"
+
+        try:
+            with open(filename, 'r') as file:
+                lines = file.readlines()
+
+                sequence = lines[3].strip().upper()
+                structure = lines[4].strip().replace('[', '.').replace(']', '.')
+
+                parse_rna_parentheses(structure, sequence, output_file)
+
+        except FileNotFoundError:
+            print(f"File {filename} not found. Skipping...")
+        except IndexError:
+            print(f"File {filename} has an invalid format. Skipping...")

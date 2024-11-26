@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $rna_sequence = htmlspecialchars($_POST['rna_sequence']);
-    $user_email = htmlspecialchars($_POST['user_email']);
+    $rna_sequence = htmlspecialchars($_POST['structure']);
+    $user_email = htmlspecialchars($_POST['email']);
 } else {
     header("Location: index.html");
     exit();

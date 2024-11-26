@@ -3,70 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIC-RNA</title>
+    <title>BIC-RNA: A Comprehensive Tool for RNA Design</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-			background-image: url('RNA.jpg');
-            background-repeat: repeat;
-            background-size: auto;
-			background-blend-mode: color-burn;
-			background-size: 150px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
-        .form-container {
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px 15px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-        .form-container h2 {
+
+        header {
+            background: #007acc;
+            color: #fff;
+            padding: 10px 0;
             text-align: center;
+        }
+
+        nav {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .Form_Container p {
+            font-size: 1.2rem;
+            color: #333;
             margin-bottom: 20px;
         }
-        .form-container input, .form-container textarea, .form-container button {
-            width: 100%;
-            margin: 8px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+
+        label {
+            font-size: 1rem;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
         }
-        .form-container button {
-            background-color: #10c5d1;
-            color: white;
+
+        textarea, input[type="file"] {
+            width: 100%;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: #007acc;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
             cursor: pointer;
         }
-        .form-container button:hover {
-            background-color: #45a049;
+
+        button:hover {
+            background: #005fa3;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>BIC-RNA: A Comprehensive Tool for RNA Design</h1>
+    </header>
 
-<div class="form-container">
-    <h2>BIC-RNA</h2>
-    <form action="index.php" method="POST">
-        <label for="rna-sequence">RNA Sequence</label>
-        <textarea id="rna-sequence" name="rna_sequence" rows="4" placeholder="Enter RNA sequence here..."></textarea>
-        
-        <label for="user-email">Email</label>
-        <input type="email" id="user-email" name="user_email" placeholder="Enter your email" required>
-        
-        <small>Example of secondary structure: (((...((..)).)))</small>
-        
-        <button type="button" onclick="insertSampleRNA()">Insert Sample RNA</button>
-        <button type="submit">Submit</button>
-    </form>
-</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
 
-<script>
-    function insertSampleRNA() {
-        document.getElementById("rna-sequence").value = "(((...((..)).)))";
-    }
-</script>
+    <div class="container">
+        <div class="Form_Container">
+            <p>Enter the secondary structure of your RNA and your email address to receive the analysis results.</p>
+            <form id="rnaForm" action="Result.php" method="post">
+                <label for="structure">RNA Secondary Structure:</label>
+                <textarea id="structure" name="structure" placeholder="Enter RNA secondary structure here" rows="5" required></textarea>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>
